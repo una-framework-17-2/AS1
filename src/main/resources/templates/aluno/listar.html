@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listar Alunos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>José Guilherme</td>
+                <td>20</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Ações">
+                        <a th:href="@{/editar?(alunoId=1)}" class="btn btn-info btn-sm">Editar</a>
+                        <a th:href="@{/delete?(alunoId=1)}" class="btn btn-danger btn-sm">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Ana Olivia</td>
+                <td>23</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Ações">
+                        <a th:href="@{/editar?(alunoId=2)}" class="btn btn-info btn-sm">Editar</a>
+                        <a th:href="@{/delete?(alunoId=2)}" class="btn btn-danger btn-sm">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Laura</td>
+                <td>26</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Ações">
+                        <a th:href="@{/editar?(alunoId=3)}" class="btn btn-info btn-sm">Editar</a>
+                        <a th:href="@{/delete?(alunoId=3)}" class="btn btn-danger btn-sm">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <a th:href="@{/novo}" class="btn btn-primary">Novo</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

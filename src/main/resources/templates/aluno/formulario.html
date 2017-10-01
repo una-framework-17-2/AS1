@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Form Aluno</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post">
+                <div class="form-group">
+                    <label for="inputNome">Nome</label>
+                    <input type="text" class="form-control" id="inputNome"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputDtNascimento">Data Nascimento</label>
+                    <input type="date" class="form-control" id="inputDtNascimento"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputEndereco">Endereço</label>
+                    <input type="text" class="form-control" id="inputEndereco"/>
+                </div>
+                <a th:href="@{/}" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
